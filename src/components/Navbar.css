@@ -1,0 +1,329 @@
+/* Navbar.css - Transparent to White on Scroll with Reduced Header Size */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2px 0; /* Reduced padding */
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+/* Transparent Navbar (Initial state on hero) */
+.navbar.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* White Navbar (After scrolling) */
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Removed padding when scrolled */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Maintained max width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px; /* Maintained horizontal padding */
+  height: 70px; /* Explicitly set a smaller height for the header */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Logo styling changes based on scroll position */
+.navbar.transparent .navbar-logo {
+  color: white;
+}
+
+.navbar.scrolled .navbar-logo {
+  color: var(--dark-color);
+}
+
+.navbar-logo img {
+  height: 110px; /* Maintained the logo size at 110px */
+  width: auto;
+  margin-right: 10px;
+  object-fit: contain; /* Ensure logo maintains proportions */
+  position: relative; /* Added for positioning */
+  top:-5px; /* Move the logo image up to reduce visible height */
+}
+
+.navbar-logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  top: -5px; /* Move menu up slightly to align with reduced header */
+}
+
+.navbar-item {
+  margin: 0 12px; /* Slightly reduced margin */
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-item a, 
+.navbar-item span {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 3px 4px; /* Reduced padding */
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 0.95rem; /* Slightly smaller font */
+}
+
+/* Navigation links styling changes based on scroll position */
+.navbar.transparent .navbar-item a, 
+.navbar.transparent .navbar-item span {
+  color: white;
+}
+
+.navbar.scrolled .navbar-item a, 
+.navbar.scrolled .navbar-item span {
+  color: var(--dark-color);
+}
+
+.navbar-item i {
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-item i.rotate {
+  transform: rotate(180deg);
+}
+
+/* Active link styles */
+.navbar.transparent .navbar-item a.active, 
+.navbar.transparent .navbar-item span.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar.scrolled .navbar-item a.active, 
+.navbar.scrolled .navbar-item span.active {
+  color: var(--secondary-color);
+}
+
+.navbar-item a::after, 
+.navbar-item span::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* Underline effect for transparent navbar */
+.navbar.transparent .navbar-item a::after, 
+.navbar.transparent .navbar-item span::after {
+  background-color: white;
+}
+
+/* Underline effect for scrolled navbar */
+.navbar.scrolled .navbar-item a::after, 
+.navbar.scrolled .navbar-item span::after {
+  background-color: var(--secondary-color);
+}
+
+.navbar-item a:hover::after, 
+.navbar-item span:hover::after,
+.navbar-item a.active::after, 
+.navbar-item span.active::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 8px 0; /* Reduced padding */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px 15px; /* Reduced padding */
+  transition: all 0.3s ease;
+  color: var(--dark-color) !important;
+  font-size: 0.9rem; /* Smaller font */
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  top: -10px; /* Align with menu */
+}
+
+.hamburger {
+  width: 25px; /* Smaller hamburger */
+  height: 2px; /* Thinner lines */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger color changes based on scroll position */
+.navbar.transparent .hamburger {
+  background-color: white;
+}
+
+.navbar.scrolled .hamburger {
+  background-color: var(--dark-color);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 25px; /* Match with hamburger width */
+  height: 2px; /* Match with hamburger height */
+  transition: all 0.3s ease;
+}
+
+/* Hamburger lines color changes based on scroll position */
+.navbar.transparent .hamburger::before,
+.navbar.transparent .hamburger::after {
+  background-color: white;
+}
+
+.navbar.scrolled .hamburger::before,
+.navbar.scrolled .hamburger::after {
+  background-color: var(--dark-color);
+}
+
+.hamburger::before {
+  transform: translateY(-8px); /* Reduced spacing */
+}
+
+.hamburger::after {
+  transform: translateY(8px); /* Reduced spacing */
+}
+
+.hamburger.active {
+  background-color: transparent !important;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  .navbar-container {
+    height: 60px; /* Even smaller height on mobile */
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    top: 60px; /* Match with navbar-container height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjusted accordingly */
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    top: 0; /* Reset top position for mobile menu */
+  }
+  
+  .navbar-menu.active {
+    left: 0;
+  }
+  
+  /* Mobile menu is always dark text on white background */
+  .navbar.transparent .navbar-menu .navbar-item a,
+  .navbar.transparent .navbar-menu .navbar-item span {
+    color: var(--dark-color);
+  }
+  
+  .navbar-item {
+    margin: 6px 0; /* Reduced margin */
+    height: auto;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding: 0 0 0 12px; /* Reduced padding */
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+    transform: none;
+  }
+  
+  /* Adjust logo for mobile but keep it visible */
+  .navbar-logo img {
+    height: 110px; /* Maintain logo size */
+    top: -30px; /* Increased offset on mobile to keep header small */
+  }
+}

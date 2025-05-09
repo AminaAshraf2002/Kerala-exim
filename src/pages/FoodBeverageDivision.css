@@ -1,0 +1,588 @@
+/* FoodBeverageDivision.css - With "fb-" prefix to avoid conflicts */
+
+:root {
+  --primary-color: #3A96A0;
+  --secondary-color: #f4a646;
+  --dark-color: #333333;
+  --light-color: #F8F9FA;
+  --transition: all 0.3s ease;
+}
+
+.fb-business-division-page {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+/* Page Header */
+.fb-page-header {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(58, 150, 160, 0.493), 
+    rgba(244, 166, 70, 0.459)
+  ), url('../assets/food.jpeg') center/cover;
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fb-page-header .fb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.fb-page-header .fb-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fb-page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fb-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1rem;
+}
+
+.fb-breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.fb-breadcrumb a:hover {
+  color: var(--secondary-color);
+}
+
+.fb-breadcrumb a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.fb-breadcrumb a:hover::after {
+  width: 100%;
+}
+
+.fb-breadcrumb span {
+  opacity: 0.7;
+}
+
+/* Division Overview Section */
+.fb-division-overview {
+  background-color: white;
+  padding: 6rem 0;
+}
+
+.fb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fb-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.fb-overview-content .fb-section-subtitle {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.fb-division-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.fb-division-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.fb-overview-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.fb-division-features {
+  margin-bottom: 2rem;
+}
+
+.fb-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.fb-feature:hover {
+  transform: translateX(10px);
+}
+
+.fb-feature i {
+  color: var(--primary-color);
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+
+.fb-overview-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.fb-overview-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.fb-overview-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Products Section */
+.fb-section {
+  padding: 6rem 0;
+}
+
+.fb-products-section {
+  background-color: var(--light-color);
+}
+
+.fb-containers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fb-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.fb-product-category {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.fb-product-category:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.fb-category-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 25px rgba(58, 150, 160, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.fb-product-category:hover .fb-category-icon {
+  transform: rotate(360deg);
+}
+
+.fb-product-category h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.fb-product-category p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Industries Section */
+.fb-industries-section {
+  background-color: white;
+}
+
+.fb-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.fb-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.fb-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.fb-section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fb-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.fb-industry-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.fb-industry-item:hover {
+  transform: translateY(-10px);
+}
+
+.fb-industry-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fb-industry-item:hover img {
+  transform: scale(1.1);
+}
+
+.fb-industry-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.fb-industry-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.fb-industry-content p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Why Choose Us Section */
+.fb-why-choose-section {
+  background-color: var(--light-color);
+}
+
+.fb-why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.fb-advantage-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fb-advantage-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.fb-advantage-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 25px rgba(58, 150, 160, 0.3);
+}
+
+.fb-advantage-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.fb-advantage-card p {
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* CTA Section */
+.fb-cta-section {
+  background: linear-gradient(135deg, 
+    rgba(58, 150, 160, 0.9), 
+    rgba(244, 166, 70, 0.9)
+  ), url('../assets/cta-bg.jpg') center/cover;
+  color: white;
+  text-align: center;
+}
+
+.fb-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fb-cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.fb-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+  .fb-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fb-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .fb-why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .fb-overview-grid,
+  .fb-industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fb-page-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .fb-division-title {
+    font-size: 2.2rem;
+  }
+  
+  .fb-section {
+    padding: 4rem 0;
+  }
+
+  .fb-section-title {
+    font-size: 2.2rem;
+  }
+
+  .fb-section-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fb-page-header {
+    padding: 4rem 0;
+  }
+
+  .fb-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .fb-division-title {
+    font-size: 2rem;
+  }
+
+  .fb-products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fb-why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .fb-section-title {
+    font-size: 2rem;
+  }
+
+  .fb-advantage-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.2rem;
+  }
+
+  .fb-advantage-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fb-page-header {
+    padding: 3rem 0;
+  }
+
+  .fb-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .fb-division-title {
+    font-size: 1.8rem;
+  }
+
+  .fb-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .fb-cta-content p {
+    font-size: 1rem;
+  }
+  
+  .fb-section {
+    padding: 3rem 0;
+  }
+
+  .fb-section-title {
+    font-size: 1.8rem;
+  }
+
+  .fb-section-description {
+    font-size: 0.95rem;
+  }
+
+  .fb-advantage-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .fb-advantage-card {
+    padding: 1.5rem;
+  }
+
+  .fb-advantage-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .fb-advantage-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Additional Accessibility and Performance Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .fb-advantage-card {
+    transition: none;
+  }
+
+  .fb-advantage-card:hover {
+    transform: none;
+  }
+  
+  .fb-feature:hover,
+  .fb-product-category:hover,
+  .fb-industry-item:hover {
+    transform: none;
+  }
+  
+  .fb-overview-image:hover img,
+  .fb-industry-item:hover img {
+    transform: none;
+  }
+  
+  .fb-product-category:hover .fb-category-icon {
+    transform: none;
+  }
+}
+
+/* Ensure full responsiveness */
+* {
+  box-sizing: border-box;
+}
+
+.fb-business-division-page img {
+  max-width: 100%;
+  height: auto;
+}
