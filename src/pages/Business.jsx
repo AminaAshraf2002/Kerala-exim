@@ -5,9 +5,9 @@ import './Business.css';
 
 // Import Business Division Images
 import chemicalImage from '../assets/chemical.jpeg';
-import industrialImage from '../assets/industrial.jpeg';
-import foodImage from '../assets/food.jpeg';
-import itImage from '../assets/it.png';
+import industrialImage from '../assets/equip1.jpeg';
+import foodImage from '../assets/food1.jpeg';
+import itImage from '../assets/equip.jpeg';
 
 const Business = () => {
   return (

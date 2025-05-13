@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 // Import Assets - Replace with your actual images
-import galleryImage1 from '../assets/logo.jpeg';
-import galleryImage2 from '../assets/logo.jpeg';
-import galleryImage3 from '../assets/logo.jpeg';
-import galleryImage4 from '../assets/logo.jpeg';
-import galleryImage5 from '../assets/logo.jpeg';
-import galleryImage6 from '../assets/logo.jpeg';
-import galleryImage7 from '../assets/logo.jpeg';
-import galleryImage8 from '../assets/logo.jpeg';
+import galleryImage1 from '../assets/paper.jpeg';
+import galleryImage2 from '../assets/spices.jpeg';
+import galleryImage3 from '../assets/food0.jpeg';
+import galleryImage4 from '../assets/paper1.jpeg';
+import galleryImage5 from '../assets/bag1.jpeg';
+import galleryImage6 from '../assets/bag0.jpeg';
+import galleryImage7 from '../assets/food4.jpeg';
+import galleryImage8 from '../assets/paper3.jpeg';
 
 const Gallery = () => {
   // Categories for the gallery filter

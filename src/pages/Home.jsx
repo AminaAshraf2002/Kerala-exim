@@ -6,7 +6,7 @@ import { faHandshake, faBolt, faBuilding, faUsersGear, faCompass, faShieldHalved
 import './Home.css';
 
 // Import Assets
-import aboutImage from '../assets/export.jpeg';
+import aboutImage from '../assets/about3.jpeg';
 import client1 from '../assets/logo.jpeg';
 import client2 from '../assets/logo.jpeg';
 import client3 from '../assets/logo.jpeg';

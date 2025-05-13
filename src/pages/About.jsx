@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './About.css';
 
 // Import Assets
-import aboutMainImage from '../assets/export.jpeg';
+import aboutMainImage from '../assets/about3.jpeg';
 import teamMember1 from '../assets/logo.jpeg';
 import teamMember2 from '../assets/logo.jpeg';
 import teamMember3 from '../assets/logo.jpeg';

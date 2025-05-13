@@ -1,4 +1,4 @@
-// Navbar.jsx
+// Navbar.jsx with Close Button Only
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
@@ -57,17 +57,14 @@ const Navbar = () => {
     }
   };
   
-  // Handle closing menu when clicking on overlay
-  const handleOverlayClick = (e) => {
-    // If clicking outside the menu and menu is open
-    if (isMenuOpen && e.target.classList.contains('navbar-overlay')) {
-      setIsMenuOpen(false);
-    }
+  // Close menu function
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : 'transparent'} ${isMenuOpen ? 'menu-open' : ''}`}>
-      <div className="container navbar-container">
+      <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <img src={logo} alt="Kerala Exim" />
         </Link>
@@ -81,15 +78,13 @@ const Navbar = () => {
         
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           {/* Close button for mobile menu */}
-          <div className="mobile-close" onClick={() => setIsMenuOpen(false)}>
-            {/* X icon is styled via CSS */}
-          </div>
+          <div className="mobile-close" onClick={closeMenu}></div>
           
           <li className="navbar-item">
             <Link 
               to="/" 
               className={location.pathname === '/' ? 'active' : ''}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Home
             </Link>
@@ -98,7 +93,7 @@ const Navbar = () => {
             <Link 
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               About Us
             </Link>
@@ -116,7 +111,7 @@ const Navbar = () => {
               <li>
                 <Link 
                   to="/business/chemical" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                 >
                   Chemical Division
                 </Link>
@@ -124,7 +119,7 @@ const Navbar = () => {
               <li>
                 <Link 
                   to="/business/industrial" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                 >
                   Industrial Division
                 </Link>
@@ -132,7 +127,7 @@ const Navbar = () => {
               <li>
                 <Link 
                   to="/business/food-beverage" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                 >
                   Food & Beverages
                 </Link>
@@ -140,7 +135,7 @@ const Navbar = () => {
               <li>
                 <Link 
                   to="/business/it" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                 >
                   IT Division
                 </Link>
@@ -151,7 +146,7 @@ const Navbar = () => {
             <Link 
               to="/enquiry" 
               className={location.pathname === '/enquiry' ? 'active' : ''}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Enquiry
             </Link>
@@ -160,7 +155,7 @@ const Navbar = () => {
             <Link 
               to="/gallery" 
               className={location.pathname === '/gallery' ? 'active' : ''}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Gallery
             </Link>
@@ -169,7 +164,7 @@ const Navbar = () => {
             <Link 
               to="/contact" 
               className={location.pathname === '/contact' ? 'active' : ''}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Contact Us
             </Link>
@@ -177,10 +172,7 @@ const Navbar = () => {
         </ul>
       </div>
       
-      {/* Overlay for mobile menu - closes menu when clicked */}
-      {isMenuOpen && (
-        <div className="navbar-overlay" onClick={handleOverlayClick}></div>
-      )}
+      
     </nav>
   );
 };

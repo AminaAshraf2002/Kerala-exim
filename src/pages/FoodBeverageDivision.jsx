@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './FoodBeverageDivision.css';
 
 // Import Assets
-import foodImage1 from '../assets/food.jpeg';
+import foodImage1 from '../assets/food4.jpeg';
 import foodImage2 from '../assets/logo.jpeg';
 import foodImage3 from '../assets/logo.jpeg';
 

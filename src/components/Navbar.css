@@ -1,10 +1,13 @@
-/* Navbar.css - Fully Responsive with Fixed Mobile Logo */
+/* Navbar.css - Fixed Logo Size and Close Button Only */
 
 :root {
   --navbar-height-desktop: 70px;
   --navbar-height-tablet: 65px;
   --navbar-height-mobile: 60px;
   --navbar-height-small: 55px;
+  --primary-color: #3A96A0;
+  --secondary-color: #f4a646;
+  --dark-color: #333333;
 }
 
 .navbar {
@@ -60,8 +63,9 @@
   color: var(--dark-color);
 }
 
+/* Fixed logo size for different screen sizes */
 .navbar-logo img {
-  height: 120px; /* Smaller base logo size */
+  height: 65px; /* Base logo size */
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -300,7 +304,7 @@
   }
   
   .navbar-logo img {
-    height: 70px;
+    height: 60px; /* Keep consistent logo size */
   }
 }
 
@@ -310,7 +314,7 @@
   }
   
   .navbar-logo img {
-    height: 65px;
+    height: 55px;
   }
 }
 
@@ -324,7 +328,7 @@
   }
   
   .navbar-logo img {
-    height: 60px;
+    height: 50px;
   }
   
   /* Mobile menu styling */
@@ -336,7 +340,7 @@
     height: 100vh;
     flex-direction: column;
     background-color: white;
-    padding: 80px 20px 20px;
+    padding: 60px 20px 20px;
     transition: all 0.4s ease;
     overflow-y: auto;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -359,7 +363,7 @@
     transition: all 0.4s ease;
   }
   
-  .navbar-overlay.active {
+  .navbar.menu-open .navbar-overlay {
     opacity: 1;
     visibility: visible;
   }
@@ -389,7 +393,7 @@
     justify-content: space-between; /* For dropdown arrows */
   }
   
-  /* Close button in mobile menu */
+  /* Close button in mobile menu - ONLY THIS REMAINS */
   .mobile-close {
     position: absolute;
     top: 20px;
@@ -400,6 +404,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 1002;
   }
   
   .mobile-close::before,
@@ -449,12 +456,12 @@
   }
   
   .navbar-logo img {
-    height: 80px;
+    height: 45px;
   }
   
   .navbar-menu {
     width: 85%;
-    padding: 70px 15px 15px;
+    padding: 60px 15px 15px;
   }
 }
 
@@ -464,13 +471,13 @@
   }
   
   .navbar-logo img {
-    height: 65px;
+    height: 40px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .navbar-logo img {
-    height: 40px;
+    height: 35px;
   }
   
   .menu-icon {
@@ -507,91 +514,26 @@
 body.menu-open {
   overflow: hidden;
 }
-/* Home.css Navbar Fix Section */
 
-/* Fix navbar spacing in Home.css */
+/* Home Hero Section Padding Fix */
 .hero {
-  height: 100vh;
-  min-height: 600px;
-  color: white;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  margin-top: 0;
-  padding-top: 70px; /* Account for navbar height */
+  padding-top: var(--navbar-height-desktop);
 }
 
-/* Ensure hero content is properly positioned with navbar */
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 2;
-  padding: 0 20px;
-  position: relative;
-}
-
-/* Make hero responsive at different screen sizes */
 @media screen and (max-width: 991px) {
   .hero {
-    padding-top: 65px; /* Adjust for smaller navbar on tablets */
+    padding-top: var(--navbar-height-tablet);
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .hero {
-    padding-top: 60px; /* Adjust for smaller navbar on mobile */
-    min-height: 500px;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    padding-top: var(--navbar-height-mobile);
   }
 }
 
 @media screen and (max-width: 576px) {
   .hero {
-    padding-top: 55px; /* Adjust for even smaller navbar on small phones */
+    padding-top: var(--navbar-height-small);
   }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Fix container and section padding to better work with the navbar */
-.section, .core-values-section, .business-section, .about-section, 
-.stats-section, .testimonials-section, .clients-section, .cta-section {
-  padding-top: 5rem; /* Add enough spacing after navbar */
-}
-
-/* For the first section after hero, add a bit more padding */
-.core-values-section {
-  padding-top: 6rem;
-}
-
-/* Fix navbar overlay issues with z-index */
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0; /* Ensure video stays behind content */
-}
-
-.video-background .overlay {
-  z-index: 1; /* Ensure overlay is above video but below content */
 }

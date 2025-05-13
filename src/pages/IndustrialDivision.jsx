@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './IndustrialDivision.css';
 
 // Import Assets
-import industrialImage1 from '../assets/industrial.jpeg';
+import industrialImage1 from '../assets/equip1.jpeg';
 import industrialImage2 from '../assets/logo.jpeg';
 import industrialImage3 from '../assets/logo.jpeg';
 
