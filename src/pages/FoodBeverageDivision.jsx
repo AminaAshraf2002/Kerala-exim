@@ -5,8 +5,10 @@ import './FoodBeverageDivision.css';
 
 // Import Assets
 import foodImage1 from '../assets/food4.jpeg';
-import foodImage2 from '../assets/logo.jpeg';
-import foodImage3 from '../assets/logo.jpeg';
+import food1 from '../assets/product1.jpeg';
+import food2 from '../assets/product2.jpeg';
+import food4 from '../assets/product4.jpeg';
+
 
 const FoodBeverageDivision = () => {
   return (
@@ -131,7 +133,7 @@ const FoodBeverageDivision = () => {
           </div>
           <div className="fb-industries-grid">
             <div className="fb-industry-item" data-aos="fade-up">
-              <img src={foodImage2} alt="Retail Market" />
+              <img src={food1} alt="Retail Market" />
               <div className="fb-industry-content">
                 <h3>Retail Chains</h3>
                 <p>
@@ -142,7 +144,7 @@ const FoodBeverageDivision = () => {
               </div>
             </div>
             <div className="fb-industry-item" data-aos="fade-up" data-aos-delay="100">
-              <img src={foodImage3} alt="Hospitality Industry" />
+              <img src={food2} alt="Hospitality Industry" />
               <div className="fb-industry-content">
                 <h3>Hospitality</h3>
                 <p>
@@ -164,7 +166,7 @@ const FoodBeverageDivision = () => {
               </div>
             </div>
             <div className="fb-industry-item" data-aos="fade-up" data-aos-delay="300">
-              <img src={foodImage2} alt="Food Manufacturing" />
+              <img src={food4} alt="Food Manufacturing" />
               <div className="fb-industry-content">
                 <h3>Food Manufacturing</h3>
                 <p>

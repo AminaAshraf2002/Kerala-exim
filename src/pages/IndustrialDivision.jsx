@@ -5,8 +5,10 @@ import './IndustrialDivision.css';
 
 // Import Assets
 import industrialImage1 from '../assets/equip1.jpeg';
-import industrialImage2 from '../assets/logo.jpeg';
-import industrialImage3 from '../assets/logo.jpeg';
+import industrial1 from '../assets/industrial1.jpeg';
+import industrial2 from '../assets/industrial2.jpeg';
+import industrial3 from '../assets/industrial3.jpeg';
+import industrial4 from '../assets/industrial4.jpeg';
 
 const IndustrialDivision = () => {
   return (
@@ -126,7 +128,7 @@ const IndustrialDivision = () => {
         </div>
         <div className="industrial-industries-grid">
           <div className="industrial-industry-item" data-aos="fade-up">
-            <img src={industrialImage2} alt="Construction Industry" />
+            <img src={industrial1} alt="Construction Industry" />
             <div className="industrial-industry-content">
               <h3>Construction</h3>
               <p>
@@ -137,7 +139,7 @@ const IndustrialDivision = () => {
             </div>
           </div>
           <div className="industrial-industry-item" data-aos="fade-up" data-aos-delay="100">
-            <img src={industrialImage3} alt="Manufacturing Industry" />
+            <img src={industrial2} alt="Manufacturing Industry" />
             <div className="industrial-industry-content">
               <h3>Manufacturing</h3>
               <p>
@@ -148,7 +150,7 @@ const IndustrialDivision = () => {
             </div>
           </div>
           <div className="industrial-industry-item" data-aos="fade-up" data-aos-delay="200">
-            <img src={industrialImage1} alt="Automotive Industry" />
+            <img src={industrial3} alt="Automotive Industry" />
             <div className="industrial-industry-content">
               <h3>Automotive</h3>
               <p>
@@ -159,7 +161,7 @@ const IndustrialDivision = () => {
             </div>
           </div>
           <div className="industrial-industry-item" data-aos="fade-up" data-aos-delay="300">
-            <img src={industrialImage2} alt="Infrastructure Industry" />
+            <img src={industrial4} alt="Infrastructure Industry" />
             <div className="industrial-industry-content">
               <h3>Infrastructure</h3>
               <p>

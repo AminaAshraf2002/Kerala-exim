@@ -5,8 +5,10 @@ import './ChemicalDivision.css'
 
 // Import Assets
 import chemicalImage1 from '../assets/chemical.jpeg';
-import chemicalImage2 from '../assets/logo.jpeg';
-import chemicalImage3 from '../assets/logo.jpeg';
+import chemical1 from '../assets/chemical1.jpeg';
+import chemical2 from '../assets/chemical2.jpeg';
+import chemical3 from '../assets/chemical3.jpeg';
+import chemical4 from '../assets/chemical4.jpeg';
 
 const ChemicalDivision = () => {
   return (
@@ -131,7 +133,7 @@ const ChemicalDivision = () => {
           </div>
           <div className="chemical-industries-grid">
             <div className="chemical-industry-item" data-aos="fade-up">
-              <img src={chemicalImage2} alt="Pharmaceutical Industry" />
+              <img src={chemical1} alt="Pharmaceutical Industry" />
               <div className="chemical-industry-content">
                 <h3>Pharmaceutical</h3>
                 <p>
@@ -141,7 +143,7 @@ const ChemicalDivision = () => {
               </div>
             </div>
             <div className="chemical-industry-item" data-aos="fade-up" data-aos-delay="100">
-              <img src={chemicalImage3} alt="Manufacturing Industry" />
+              <img src={chemical2} alt="Manufacturing Industry" />
               <div className="chemical-industry-content">
                 <h3>Manufacturing</h3>
                 <p>
@@ -151,7 +153,7 @@ const ChemicalDivision = () => {
               </div>
             </div>
             <div className="chemical-industry-item" data-aos="fade-up" data-aos-delay="200">
-              <img src={chemicalImage1} alt="Research Industry" />
+              <img src={chemical3} alt="Research Industry" />
               <div className="chemical-industry-content">
                 <h3>Research & Development</h3>
                 <p>
@@ -161,7 +163,7 @@ const ChemicalDivision = () => {
               </div>
             </div>
             <div className="chemical-industry-item" data-aos="fade-up" data-aos-delay="300">
-              <img src={chemicalImage2} alt="Agricultural Industry" />
+              <img src={chemical4} alt="Agricultural Industry" />
               <div className="chemical-industry-content">
                 <h3>Agriculture</h3>
                 <p>
